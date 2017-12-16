@@ -21,8 +21,8 @@ public class DBConnect {
             rs = st.executeQuery(query);
             System.out.println("Record from database");
             while (rs.next()){
-                String name = rs.getString("Nama");
-                int nim = rs.getInt("NIM");
+                String name = rs.getString("nama");
+                String nim = rs.getString("nim");
                 System.out.println("Name: "+name+"    "+"NIM:"+nim );
             }
         }catch(Exception ex) {
