@@ -209,7 +209,7 @@ public class loginPage extends javax.swing.JFrame {
     }//GEN-LAST:event_lupapasswordsigninActionPerformed
 
     private void xloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xloginActionPerformed
-        dispose();
+
     }//GEN-LAST:event_xloginActionPerformed
 
 

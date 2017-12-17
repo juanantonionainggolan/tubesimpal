@@ -1,6 +1,8 @@
 package controller;
 import java.sql.*;
+import java.util.ArrayList;
 import model.dosen;
+import model.jawaban;
 import model.mahasiswa;
 public class DBConnect {
     private Connection con;
@@ -156,5 +158,24 @@ public class DBConnect {
                 + "'" + jawaban
                 + "')";
             statement.execute(query);
+    }
+    public ArrayList<jawaban> loadjawaban() throws SQLException {
+            Statement statement;
+            Connection connection;
+            connection = DriverManager.getConnection("jdbc:mysql://localhost/impal", "root", "");
+            statement = connection.createStatement();
+            try{
+                ArrayList<jawaban> daftarjawaban =new ArrayList<>();
+                String query = "select *from jawaban";
+                ResultSet rs = statement.executeQuery(query);
+                while (rs.next()) {
+                    jawaban j= new jawaban(rs.getString("kode_soal"), rs.getString("jawaban"), rs.getString("nim"));
+                    daftarjawaban.add(j);
+                }
+                return daftarjawaban;
+            }catch (Exception e) {
+            throw new IllegalArgumentException("terjadi kesalahan saat load penyewa");
+            }
+            
     }
 }
