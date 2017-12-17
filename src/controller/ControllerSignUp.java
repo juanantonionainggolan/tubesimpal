@@ -16,7 +16,7 @@ import java.util.logging.Logger;
  * @author Dunia Imajinasiku
  */
 public class ControllerSignUp implements ActionListener {
-    signupPage signup;
+    private signupPage signup;
     public ControllerSignUp(){
         signup = new signupPage();
         signup.setVisible(true);
@@ -26,8 +26,8 @@ public class ControllerSignUp implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         Object a = e.getSource();
         DBConnect d = new DBConnect();
-        if (a ==signup.getDaftarsignup()){
-            //if (signup.getMahasiswasignip().isSelected()){
+        if (a.equals(signup.getDaftarsignup())){
+            if (signup.getMahasiswasignip().isSelected()){
                 String nim, nama, email, alamat, password, tgl_lahir;
                 nim=signup.getNimnipsignup();
                 nama=signup.getNamasignup();
@@ -40,9 +40,10 @@ public class ControllerSignUp implements ActionListener {
                 } catch (SQLException ex) {
                     Logger.getLogger(ControllerSignUp.class.getName()).log(Level.SEVERE, null, ex);
                 }
+                signup.dispose();
                 new ControllerloginPage();
             }
-            /*else if(signup.getDosensignup().isSelected()){
+            else if(signup.getDosensignup().isSelected()){
                 String nip, nama, email, alamat, password, tgl_lahir;
                 nip=signup.getNimnipsignup();
                 nama=signup.getNamasignup();
@@ -56,8 +57,8 @@ public class ControllerSignUp implements ActionListener {
                     Logger.getLogger(ControllerSignUp.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 new ControllerloginPage();
-            }*/
+            }
       
-    //}
+    }
     }
 }

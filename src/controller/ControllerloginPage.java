@@ -7,6 +7,9 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import view.loginPage;
 
 /**
@@ -21,7 +24,31 @@ public class ControllerloginPage implements ActionListener {
         loginpage.addListener(this);
     }
     @Override
-    public void actionPerformed(ActionEvent ae) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void actionPerformed(ActionEvent e) {
+        Object a = e.getSource();
+        DBConnect d = new DBConnect();
+        if (a==loginpage.getLupapasswordsignin()){
+            loginpage.dispose();
+            new ControllerlupapasswordPage();
+        }
+        else if (a==loginpage.getSignupsignin()){
+            loginpage.dispose();
+            new ControllerSignUp();
+        }
+        else if (a.equals(loginpage.getSigninsignin())){
+            try {
+                String nimnimp = loginpage.getNimniplogin();
+                String password = loginpage.getPasslogin();
+                if (d.cekuser(nimnimp, password) == true ){
+                    new ControllerSignUp();
+                    System.out.println("Login Sukses");
+                }
+                else {
+                    new ControllerloginPage();
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(ControllerloginPage.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
     }
 }

@@ -8,7 +8,7 @@ public class DBConnect {
     public DBConnect() {
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/impal","root","");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/tubesimpal","root","");
             st = con.createStatement();
         }catch (Exception ex){
             System.out.println("Error: "+ex);
@@ -32,7 +32,7 @@ public class DBConnect {
     public void masukDatabaseMahasiswa(String nim, String nama, String email, String alamat, String tgl_lahir, String password) throws SQLException {
             Statement statement;
             Connection connection;
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/impal", "root", "");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost/tubesimpal", "root", "");
             statement = connection.createStatement();
             String query = "insert into mahasiswa "
                 + "(nim, nama, email, alamat, tgl_lahir, password) values ("
@@ -48,7 +48,7 @@ public class DBConnect {
     public void masukDatabaseDosen(String nip, String nama, String email, String alamat, String tgl_lahir, String password) throws SQLException {
             Statement statement;
             Connection connection;
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/impal", "root", "");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/tubesimpal", "root", "");
             statement = connection.createStatement();
             String query = "insert into dosen "
                 + "(nip, nama, email, alamat, tgl_lahir, password) values ("
@@ -61,4 +61,19 @@ public class DBConnect {
                 + "')";
             statement.execute(query);
         }
+    public void cekuser(String nim, String password) throws SQLException {
+            Statement statement;
+            Connection connection;
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/tubesimpal", "root", "");
+            statement = connection.createStatement();
+            String query = "select nim from mahasiswa where"
+                +" nim=" +"'"+nim+"'"
+                +" and " +"password=" +"'" +password+ "'";
+            ResultSet rs=statement.executeQuery(query);
+//            String query1 = "select nip from dosen where"
+//                +" nip=" +"'"+nim+"'"
+//                +" and " +"password=" +"'" +password+ "'";
+//            boolean b=statement.execute(query1);
+            
+    }
 }
