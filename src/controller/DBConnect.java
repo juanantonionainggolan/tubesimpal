@@ -8,7 +8,7 @@ public class DBConnect {
     public DBConnect() {
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/tubesimpal","root","");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/impal","root","");
             st = con.createStatement();
         }catch (Exception ex){
             System.out.println("Error: "+ex);
@@ -29,4 +29,36 @@ public class DBConnect {
             System.out.println("Error: "+ex);
         }
     }
+    public void masukDatabaseMahasiswa(String nim, String nama, String email, String alamat, String tgl_lahir, String password) throws SQLException {
+            Statement statement;
+            Connection connection;
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/impal", "root", "");
+            statement = connection.createStatement();
+            String query = "insert into mahasiswa "
+                + "(nim, nama, email, alamat, tgl_lahir, password) values ("
+                + "'" + nim + "',"
+                + "'" + nama + "',"
+                + "'" + email + "',"
+                + "'" + alamat + "',"
+                + "'" + tgl_lahir + "',"
+                + "'" + password
+                + "')";
+            statement.execute(query);
+        }
+    public void masukDatabaseDosen(String nip, String nama, String email, String alamat, String tgl_lahir, String password) throws SQLException {
+            Statement statement;
+            Connection connection;
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/impal", "root", "");
+            statement = connection.createStatement();
+            String query = "insert into dosen "
+                + "(nip, nama, email, alamat, tgl_lahir, password) values ("
+                + "'" + nip + "',"
+                + "'" + nama + "',"
+                + "'" + email + "',"
+                + "'" + alamat + "',"
+                + "'" + tgl_lahir + "',"
+                + "'" + password
+                + "')";
+            statement.execute(query);
+        }
 }
