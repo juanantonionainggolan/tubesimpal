@@ -124,28 +124,28 @@ public class editProfilm extends javax.swing.JFrame {
         return updateeditprofile;
     }
 
-    public JTextField getAlamateditprofil() {
-        return alamateditprofil;
+    public String getAlamateditprofil() {
+        return alamateditprofil.getText();
     }
 
-    public void setAlamateditprofil(JTextField alamateditprofil) {
-        this.alamateditprofil = alamateditprofil;
+    public void setAlamateditprofil(String s) {
+        this.alamateditprofil.setText(s);
     }
 
-    public JTextField getEmaileditprofile() {
-        return emaileditprofile;
+    public String getEmaileditprofile() {
+        return emaileditprofile.getText();
     }
 
-    public void setEmaileditprofile(JTextField emaileditprofile) {
-        this.emaileditprofile = emaileditprofile;
+    public void setEmaileditprofile(String s) {
+        this.emaileditprofile.setText(s);
     }
 
-    public JTextField getPasswordeditprofil() {
-        return passwordeditprofil;
+    public String getPasswordeditprofil() {
+        return passwordeditprofil.getText();
     }
 
-    public void setPasswordeditprofil(JTextField passwordeditprofil) {
-        this.passwordeditprofil = passwordeditprofil;
+    public void setPasswordeditprofil(String s) {
+        this.passwordeditprofil.setText(s);
     }
 
     private void updateeditprofileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateeditprofileActionPerformed

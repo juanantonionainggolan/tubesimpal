@@ -13,7 +13,7 @@ import java.sql.Date;
  */
 public class dosen {
 
-    public dosen(String nip, String nama, String email, String alamat, Date tgl_lahir, String password) {
+    public dosen(String nip, String nama, String email, String alamat, String tgl_lahir, String password) {
         this.nip = nip;
         this.nama = nama;
         this.email = email;
@@ -81,14 +81,14 @@ public class dosen {
     /**
      * @return the tgl_lahir
      */
-    public Date getTgl_lahir() {
+    public String getTgl_lahir() {
         return tgl_lahir;
     }
 
     /**
      * @param tgl_lahir the tgl_lahir to set
      */
-    public void setTgl_lahir(Date tgl_lahir) {
+    public void setTgl_lahir(String tgl_lahir) {
         this.tgl_lahir = tgl_lahir;
     }
 
@@ -109,7 +109,7 @@ public class dosen {
    private String nama;
    private String email;
    private String alamat;
-   private Date tgl_lahir;
+   private String tgl_lahir;
    private String password;
    
 }

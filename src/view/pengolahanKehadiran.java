@@ -126,28 +126,28 @@ public class pengolahanKehadiran extends javax.swing.JFrame {
         return inputkehadiranpengolahankehadiran;
     }
 
-    public JTextField getKehadiranpengolahankehadiran() {
-        return kehadiranpengolahankehadiran;
+    public String getKehadiranpengolahankehadiran() {
+        return kehadiranpengolahankehadiran.getText();
     }
 
-    public void setKehadiranpengolahankehadiran(JTextField kehadiranpengolahankehadiran) {
-        this.kehadiranpengolahankehadiran = kehadiranpengolahankehadiran;
+    public void setKehadiranpengolahankehadiran(String s) {
+        this.kehadiranpengolahankehadiran.setText(s);
     }
 
-    public JTextField getMatakuiahpengolahankehadiran() {
-        return matakuiahpengolahankehadiran;
+    public String getMatakuiahpengolahankehadiran() {
+        return matakuiahpengolahankehadiran.getText();
     }
 
-    public void setMatakuiahpengolahankehadiran(JTextField matakuiahpengolahankehadiran) {
-        this.matakuiahpengolahankehadiran = matakuiahpengolahankehadiran;
+    public void setMatakuiahpengolahankehadiran(String s) {
+        this.matakuiahpengolahankehadiran.setText(s);
     }
 
-    public JTextField getNimpengolahankehadiran() {
-        return nimpengolahankehadiran;
+    public String getNimpengolahankehadiran() {
+        return nimpengolahankehadiran.getText();
     }
 
-    public void setNimpengolahankehadiran(JTextField nimpengolahankehadiran) {
-        this.nimpengolahankehadiran = nimpengolahankehadiran;
+    public void setNimpengolahankehadiran(String s) {
+        this.nimpengolahankehadiran.setText(s);
     }
 
     private void matakuiahpengolahankehadiranActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matakuiahpengolahankehadiranActionPerformed

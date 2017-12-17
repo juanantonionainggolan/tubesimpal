@@ -5,7 +5,6 @@
  */
 package model;
 
-import java.sql.Date;
 
 /**
  *
@@ -13,7 +12,7 @@ import java.sql.Date;
  */
 public class mahasiswa {
 
-    public mahasiswa(String nim, String nama, String email, String alamat, Date tgl_lahir, String password) {
+    public mahasiswa(String nim, String nama, String email, String alamat, String tgl_lahir, String password) {
         this.nim = nim;
         this.nama = nama;
         this.email = email;
@@ -81,14 +80,14 @@ public class mahasiswa {
     /**
      * @return the tgl_lahir
      */
-    public Date getTgl_lahir() {
+    public String getTgl_lahir() {
         return tgl_lahir;
     }
 
     /**
      * @param tgl_lahir the tgl_lahir to set
      */
-    public void setTgl_lahir(Date tgl_lahir) {
+    public void setTgl_lahir(String tgl_lahir) {
         this.tgl_lahir = tgl_lahir;
     }
 
@@ -109,7 +108,7 @@ public class mahasiswa {
     private String nama;
     private String email;
     private String alamat;
-    private Date tgl_lahir;
+    private String tgl_lahir;
     private String password;
     
 }

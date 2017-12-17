@@ -90,20 +90,20 @@ public class uploadJawaban extends javax.swing.JFrame {
         return uploaduploadjawaban;
     }
 
-    public JTextField getJawabanuploadjawaban() {
-        return jawabanuploadjawaban;
+    public String getJawabanuploadjawaban() {
+        return jawabanuploadjawaban.getText();
     }
 
-    public void setJawabanuploadjawaban(JTextField jawabanuploadjawaban) {
-        this.jawabanuploadjawaban = jawabanuploadjawaban;
+    public void setJawabanuploadjawaban(String s) {
+        this.jawabanuploadjawaban.setText(s);
     }
 
-    public JTextField getKodetugasuploadjawaban() {
-        return kodetugasuploadjawaban;
+    public String getKodetugasuploadjawaban() {
+        return kodetugasuploadjawaban.getText();
     }
 
-    public void setKodetugasuploadjawaban(JTextField kodetugasuploadjawaban) {
-        this.kodetugasuploadjawaban = kodetugasuploadjawaban;
+    public void setKodetugasuploadjawaban(String s) {
+        this.kodetugasuploadjawaban.setText(s);
     }
 
     public void addListener (ActionListener e) {

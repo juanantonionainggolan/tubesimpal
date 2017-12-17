@@ -87,12 +87,12 @@ public class lupapasswordPage extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    public JTextField getEmaillupapassword() {
-        return emaillupapassword;
+    public String getEmaillupapassword() {
+        return emaillupapassword.getText();
     }
 
-    public void setEmaillupapassword(JTextField emaillupapassword) {
-        this.emaillupapassword = emaillupapassword;
+    public void setEmaillupapassword(String s) {
+        this.emaillupapassword.setText(s);
     }
 
     public JButton getKirimpasswordlupapassword() {

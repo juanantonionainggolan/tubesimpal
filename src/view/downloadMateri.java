@@ -120,12 +120,12 @@ public class downloadMateri extends javax.swing.JFrame {
         return jTable1;
     }
 
-    public JTextField getKodemk() {
-        return kodemk;
+    public String getKodemk() {
+        return kodemk.getText();
     }
 
-    public void setKodemk(JTextField kodemk) {
-        this.kodemk = kodemk;
+    public void setKodemk(String s) {
+        this.kodemk.setText(s);
     }
 
     private void kodemkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kodemkActionPerformed

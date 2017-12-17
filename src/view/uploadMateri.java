@@ -102,20 +102,20 @@ public class uploadMateri extends javax.swing.JFrame {
         return uploaduploadmateri;
     }
 
-    public JTextField getKodemateriuploadmateri() {
-        return kodemateriuploadmateri;
+    public String getKodemateriuploadmateri() {
+        return kodemateriuploadmateri.getText();
     }
 
-    public void setKodemateriuploadmateri(JTextField kodemateriuploadmateri) {
-        this.kodemateriuploadmateri = kodemateriuploadmateri;
+    public void setKodemateriuploadmateri(String s) {
+        this.kodemateriuploadmateri.setText(s);
     }
 
-    public JTextField getNamamateriiploadmateri() {
-        return namamateriiploadmateri;
+    public String getNamamateriiploadmateri() {
+        return namamateriiploadmateri.getText();
     }
 
-    public void setNamamateriiploadmateri(JTextField namamateriiploadmateri) {
-        this.namamateriiploadmateri = namamateriiploadmateri;
+    public void setNamamateriiploadmateri(String s) {
+        this.namamateriiploadmateri.setText(s);
     }
 
     private void uploaduploadmateriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uploaduploadmateriActionPerformed

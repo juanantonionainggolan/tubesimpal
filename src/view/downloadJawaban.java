@@ -111,12 +111,12 @@ public class downloadJawaban extends javax.swing.JFrame {
         return jTable1;
     }
 
-    public JTextField getDtxt() {
-        return dtxt;
+    public String getDtxt() {
+        return dtxt.getText();
     }
 
-    public void setDtxt(JTextField dtxt) {
-        this.dtxt = dtxt;
+    public void setDtxt(String s) {
+        this.dtxt.setText(s);
     }
     
     public void addListener(ActionListener e) {

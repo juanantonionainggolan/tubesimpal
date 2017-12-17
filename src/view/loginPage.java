@@ -157,12 +157,12 @@ public class loginPage extends javax.swing.JFrame {
         this.nimniplogin = nimniplogin;
     }
 
-    public JTextField getPasslogin() {
-        return passlogin;
+    public String getPasslogin() {
+        return passlogin.getText();
     }
 
-    public void setPasslogin(JTextField passlogin) {
-        this.passlogin = passlogin;
+    public void setPasslogin(String s) {
+        this.passlogin.setText(s);
     }
 
     public JButton getLupapasswordsignin() {

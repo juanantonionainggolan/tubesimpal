@@ -117,28 +117,28 @@ public class pengolahanNilai extends javax.swing.JFrame {
         return inputnilaipengolahannilai;
     }
 
-    public JTextField getMatakuliahpengolahannilai() {
-        return matakuliahpengolahannilai;
+    public String getMatakuliahpengolahannilai() {
+        return matakuliahpengolahannilai.getText();
     }
 
-    public void setMatakuliahpengolahannilai(JTextField matakuliahpengolahannilai) {
-        this.matakuliahpengolahannilai = matakuliahpengolahannilai;
+    public void setMatakuliahpengolahannilai(String s) {
+        this.matakuliahpengolahannilai.setText(s);
     }
 
-    public JTextField getNilaipengolahannilai() {
-        return nilaipengolahannilai;
+    public String getNilaipengolahannilai() {
+        return nilaipengolahannilai.getText();
     }
 
-    public void setNilaipengolahannilai(JTextField nilaipengolahannilai) {
-        this.nilaipengolahannilai = nilaipengolahannilai;
+    public void setNilaipengolahannilai(String s) {
+        this.nilaipengolahannilai.setText(s);
     }
 
-    public JTextField getNimpengolahannilai() {
-        return nimpengolahannilai;
+    public String getNimpengolahannilai() {
+        return nimpengolahannilai.getText();
     }
 
-    public void setNimpengolahannilai(JTextField nimpengolahannilai) {
-        this.nimpengolahannilai = nimpengolahannilai;
+    public void setNimpengolahannilai(String s) {
+        this.nimpengolahannilai.setText(s);
     }
 
     private void inputnilaipengolahannilaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputnilaipengolahannilaiActionPerformed

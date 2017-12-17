@@ -215,12 +215,12 @@ public class signupPage extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    public JTextField getAlamatsignup() {
-        return alamatsignup;
+    public String getAlamatsignup() {
+        return alamatsignup.getText();
     }
 
-    public void setAlamatsignup(JTextField alamatsignup) {
-        this.alamatsignup = alamatsignup;
+    public void setAlamatsignup(String s) {
+        this.alamatsignup.setText(s);
     }
 
     public JRadioButton getDosensignup() {
@@ -231,12 +231,12 @@ public class signupPage extends javax.swing.JFrame {
         this.dosensignup = dosensignup;
     }
 
-    public JTextField getEmailsignup() {
-        return emailsignup;
+    public String getEmailsignup() {
+        return emailsignup.getText();
     }
 
-    public void setEmailsignup(JTextField emailsignup) {
-        this.emailsignup = emailsignup;
+    public void setEmailsignup(String s) {
+        this.emailsignup.setText(s);
     }
 
     public JRadioButton getMahasiswasignip() {
@@ -247,36 +247,36 @@ public class signupPage extends javax.swing.JFrame {
         this.mahasiswasignip = mahasiswasignip;
     }
 
-    public JTextField getNamasignup() {
-        return namasignup;
+    public String getNamasignup() {
+        return namasignup.getText();    
     }
 
-    public void setNamasignup(JTextField namasignup) {
-        this.namasignup = namasignup;
+    public void setNamasignup(String s) {
+        this.namasignup.setText(s);
     }
 
-    public JTextField getNimnipsignup() {
-        return nimnipsignup;
+    public String getNimnipsignup() {
+        return nimnipsignup.getText();
     }
 
-    public void setNimnipsignup(JTextField nimnipsignup) {
-        this.nimnipsignup = nimnipsignup;
+    public void setNimnipsignup(String s) {
+        this.nimnipsignup.setText(s);
     }
 
-    public JTextField getPasssignup() {
-        return passsignup;
+    public String getPasssignup() {
+        return passsignup.getText();
     }
 
-    public void setPasssignup(JTextField passsignup) {
-        this.passsignup = passsignup;
+    public void setPasssignup(String s) {
+        this.passsignup.setText(s);
     }
 
-    public JTextField getTgllahirsignup() {
-        return tgllahirsignup;
+    public String getTgllahirsignup() {
+        return tgllahirsignup.getText();
     }
 
-    public void setTgllahirsignup(JTextField tgllahirsignup) {
-        this.tgllahirsignup = tgllahirsignup;
+    public void setTgllahirsignup(String s) {
+        this.tgllahirsignup.setText(s);
     }
 
     public JButton getDaftarsignup() {

@@ -98,20 +98,20 @@ public class inputSoal extends javax.swing.JFrame {
         return inputsoal;
     }
 
-    public JTextField getKodetugasinputsoal() {
-        return kodetugasinputsoal;
+    public String getKodetugasinputsoal() {
+        return kodetugasinputsoal.getText();
     }
 
-    public void setKodetugasinputsoal(JTextField kodetugasinputsoal) {
-        this.kodetugasinputsoal = kodetugasinputsoal;
+    public void setKodetugasinputsoal(String s) {
+        this.kodetugasinputsoal.setText(s);
     }
 
-    public JTextField getNamatugasinputsoal() {
-        return namatugasinputsoal;
+    public String getNamatugasinputsoal() {
+        return namatugasinputsoal.getText();
     }
 
-    public void setNamatugasinputsoal(JTextField namatugasinputsoal) {
-        this.namatugasinputsoal = namatugasinputsoal;
+    public void setNamatugasinputsoal(String s) {
+        this.namatugasinputsoal.setText(s);
     }
 
     private void inputsoalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputsoalActionPerformed
