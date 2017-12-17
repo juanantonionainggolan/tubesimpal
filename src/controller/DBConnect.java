@@ -98,12 +98,63 @@ public class DBConnect {
             Connection connection;
             connection = DriverManager.getConnection("jdbc:mysql://localhost/impal", "root", "");
             statement = connection.createStatement();
-            String query = "insert into mahasiswa "
+            String query = "insert into materi "
                 + "(kode_materi, nama_materi) values ("
                 + "'" + kode_materi + "',"
                 + "'" + nama_materi
                 + "')";
             statement.execute(query);
     }
- 
+    public void masukDatabaseKehadiran(String nim, String matakuliah, String kehadiran)throws SQLException {
+                    Statement statement;
+            Connection connection;
+            connection = DriverManager.getConnection("jdbc:mysql://localhost/impal", "root", "");
+            statement = connection.createStatement();
+            String query = "insert into kehadiran "
+                + "(nim, matakuliah, kehadiran) values ("
+                + "'" + nim + "',"
+                + "'" + matakuliah + "',"
+                + "'" + kehadiran
+                + "')";
+            statement.execute(query);
+    }
+    public void masukDatabaseNilai(String nim, String matakuliah, String nilai)throws SQLException {
+                    Statement statement;
+            Connection connection;
+            connection = DriverManager.getConnection("jdbc:mysql://localhost/impal", "root", "");
+            statement = connection.createStatement();
+            String query = "insert into nilai "
+                + "(nim, matakuliah, nilai) values ("
+                + "'" + nim + "',"
+                + "'" + matakuliah + "',"
+                + "'" + nilai
+                + "')";
+            statement.execute(query);
+    }
+    public void masukDatabaseSoal(String kode_tugas, String kode_materi,String file_soal)throws SQLException {
+                    Statement statement;
+            Connection connection;
+            connection = DriverManager.getConnection("jdbc:mysql://localhost/impal", "root", "");
+            statement = connection.createStatement();
+            String query = "insert into soal "
+                + "(kode_tugas, kode_materi, file_soal) values ("
+                + "'" + kode_tugas + "',"
+                + "'" + kode_materi + "',"
+                + "'" + file_soal
+                + "')";
+            statement.execute(query);
+    }
+    public void masukDatabaseJawaban(String kode_tugas,String nim, String jawaban)throws SQLException {
+                    Statement statement;
+            Connection connection;
+            connection = DriverManager.getConnection("jdbc:mysql://localhost/impal", "root", "");
+            statement = connection.createStatement();
+            String query = "insert into Jawaban "
+                + "(kode_tugas, jawaban, nim) values ("
+                + "'" + kode_tugas + "',"
+                + "'" + nim + "',"
+                + "'" + jawaban
+                + "')";
+            statement.execute(query);
+    }
 }

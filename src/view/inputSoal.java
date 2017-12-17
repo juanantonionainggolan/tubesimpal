@@ -34,17 +34,19 @@ public class inputSoal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        kodetugasinputsoal = new javax.swing.JTextField();
-        namatugasinputsoal = new javax.swing.JTextField();
+        kodesoalinputsoal = new javax.swing.JTextField();
+        kodemateriinputsoal = new javax.swing.JTextField();
         inputsoal = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        filesoalinputsoal = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Input Tugas");
+        jLabel1.setText("Input Soal");
 
-        jLabel2.setText("Kode Tugas :");
+        jLabel2.setText("Kode Soal   :");
 
-        jLabel3.setText("Nama Tugas:");
+        jLabel3.setText("Kode Materi:");
 
         inputsoal.setText("Input");
         inputsoal.addActionListener(new java.awt.event.ActionListener() {
@@ -53,24 +55,28 @@ public class inputSoal extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setText("File Soal     :");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(122, Short.MAX_VALUE)
+                .addContainerGap(144, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(134, 134, 134))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
-                    .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(filesoalinputsoal, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(inputsoal)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(kodetugasinputsoal, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
-                        .addComponent(namatugasinputsoal)))
+                        .addComponent(kodesoalinputsoal, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+                        .addComponent(kodemateriinputsoal)))
                 .addGap(38, 38, 38))
         );
         layout.setVerticalGroup(
@@ -81,12 +87,16 @@ public class inputSoal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(kodetugasinputsoal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(kodesoalinputsoal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(namatugasinputsoal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                    .addComponent(kodemateriinputsoal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(filesoalinputsoal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
                 .addComponent(inputsoal)
                 .addGap(24, 24, 24))
         );
@@ -98,20 +108,27 @@ public class inputSoal extends javax.swing.JFrame {
         return inputsoal;
     }
 
-    public String getKodetugasinputsoal() {
-        return kodetugasinputsoal.getText();
+    public String getKodesoalinputsoal() {
+        return kodesoalinputsoal.getText();
     }
 
-    public void setKodetugasinputsoal(String s) {
-        this.kodetugasinputsoal.setText(s);
+    public void setKodesoalinputsoal(String s) {
+        this.kodesoalinputsoal.setText(s);
     }
 
-    public String getNamatugasinputsoal() {
-        return namatugasinputsoal.getText();
+    public String getKodemateriinputsoal() {
+        return kodemateriinputsoal.getText();
     }
 
-    public void setNamatugasinputsoal(String s) {
-        this.namatugasinputsoal.setText(s);
+    public void setKodemateriinputsoal(String s) {
+        this.kodemateriinputsoal.setText(s);
+    }
+    public String getFilesoalinputsoal() {
+        return filesoalinputsoal.getText();
+    }
+
+    public void setFilesoalinputsoal(String s) {
+        this.filesoalinputsoal.setText(s);
     }
 
     private void inputsoalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputsoalActionPerformed
@@ -158,11 +175,13 @@ public class inputSoal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField filesoalinputsoal;
     private javax.swing.JButton inputsoal;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField kodetugasinputsoal;
-    private javax.swing.JTextField namatugasinputsoal;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JTextField kodemateriinputsoal;
+    private javax.swing.JTextField kodesoalinputsoal;
     // End of variables declaration//GEN-END:variables
 }
