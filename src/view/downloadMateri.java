@@ -5,6 +5,7 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JTable;
 import javax.swing.JTextField;
@@ -134,7 +135,10 @@ public class downloadMateri extends javax.swing.JFrame {
     private void downloadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_downloadActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_downloadActionPerformed
-
+    
+    public void addListener (ActionListener e) {
+        download.addActionListener(e);
+    }
     /**
      * @param args the command line arguments
      */

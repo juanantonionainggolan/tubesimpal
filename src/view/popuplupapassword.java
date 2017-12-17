@@ -5,6 +5,8 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author Juan Antonio
@@ -73,6 +75,9 @@ public class popuplupapassword extends javax.swing.JFrame {
         new loginPage().setVisible(true);
     }//GEN-LAST:event_okpopuplupapasswordActionPerformed
 
+    public void addListener (ActionListener e) {
+        okpopuplupapassword.addActionListener(e);
+    }
     /**
      * @param args the command line arguments
      */

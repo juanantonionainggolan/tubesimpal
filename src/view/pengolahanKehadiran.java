@@ -5,6 +5,7 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 
@@ -158,6 +159,9 @@ public class pengolahanKehadiran extends javax.swing.JFrame {
         new homeDosen().setVisible(true);
     }//GEN-LAST:event_inputkehadiranpengolahankehadiranActionPerformed
 
+    public void addListener (ActionListener e) {
+        inputkehadiranpengolahankehadiran.addActionListener(e);
+    }
     /**
      * @param args the command line arguments
      */

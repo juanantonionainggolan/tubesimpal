@@ -5,6 +5,7 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 
@@ -107,6 +108,9 @@ public class lupapasswordPage extends javax.swing.JFrame {
         //new popuplupapassword().setVisible(true);
     }//GEN-LAST:event_kirimpasswordlupapasswordActionPerformed
 
+    public void addListener (ActionListener e) {
+        kirimpasswordlupapassword.addActionListener(e);
+    }
     /**
      * @param args the command line arguments
      */

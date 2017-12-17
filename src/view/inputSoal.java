@@ -5,6 +5,7 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 
@@ -35,7 +36,7 @@ public class inputSoal extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         kodetugasinputsoal = new javax.swing.JTextField();
         namatugasinputsoal = new javax.swing.JTextField();
-        inputinputsoal = new javax.swing.JButton();
+        inputsoal = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -45,10 +46,10 @@ public class inputSoal extends javax.swing.JFrame {
 
         jLabel3.setText("Nama Tugas:");
 
-        inputinputsoal.setText("Input");
-        inputinputsoal.addActionListener(new java.awt.event.ActionListener() {
+        inputsoal.setText("Input");
+        inputsoal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inputinputsoalActionPerformed(evt);
+                inputsoalActionPerformed(evt);
             }
         });
 
@@ -66,7 +67,7 @@ public class inputSoal extends javax.swing.JFrame {
                     .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(inputinputsoal)
+                    .addComponent(inputsoal)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(kodetugasinputsoal, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
                         .addComponent(namatugasinputsoal)))
@@ -86,7 +87,7 @@ public class inputSoal extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(namatugasinputsoal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
-                .addComponent(inputinputsoal)
+                .addComponent(inputsoal)
                 .addGap(24, 24, 24))
         );
 
@@ -94,7 +95,7 @@ public class inputSoal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     public JButton getInputinputsoal() {
-        return inputinputsoal;
+        return inputsoal;
     }
 
     public JTextField getKodetugasinputsoal() {
@@ -113,11 +114,14 @@ public class inputSoal extends javax.swing.JFrame {
         this.namatugasinputsoal = namatugasinputsoal;
     }
 
-    private void inputinputsoalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputinputsoalActionPerformed
+    private void inputsoalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputsoalActionPerformed
         //dispose();
         //new homeDosen().setVisible(true);
-    }//GEN-LAST:event_inputinputsoalActionPerformed
+    }//GEN-LAST:event_inputsoalActionPerformed
 
+    public void addListener (ActionListener e) {
+        inputsoal.addActionListener(e);
+    }
     /**
      * @param args the command line arguments
      */
@@ -154,7 +158,7 @@ public class inputSoal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton inputinputsoal;
+    private javax.swing.JButton inputsoal;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

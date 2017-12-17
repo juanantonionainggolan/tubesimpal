@@ -5,6 +5,7 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 
 /**
@@ -140,6 +141,14 @@ public class homeMahasiswa extends javax.swing.JFrame {
         //new editProfilm().setVisible(true);
     }//GEN-LAST:event_editprofilehomemahasiswaActionPerformed
 
+    public void addListener (ActionListener e) {
+        editprofilehomemahasiswa.addActionListener(e);
+        downloadmaterihomemahasiswa.addActionListener(e);
+        uploadjawabanhomemahasiswa.addActionListener(e);
+        lihatnilaihomemahasiswa.addActionListener(e);
+        lihatkehadiranhomemahasiswa.addActionListener(e);
+        signouthomemahasiswa.addActionListener(e);
+    }
     /**
      * @param args the command line arguments
      */

@@ -5,6 +5,7 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 
 /**
@@ -36,7 +37,7 @@ public class homeDosen extends javax.swing.JFrame {
         inputsoalhomedosen = new javax.swing.JButton();
         signouthomedosen = new javax.swing.JButton();
         pengolahankehadiranhomedosen = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        editprofilhomedosen = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -69,10 +70,10 @@ public class homeDosen extends javax.swing.JFrame {
 
         pengolahankehadiranhomedosen.setText("Pengolahan Kehadiran");
 
-        jButton1.setText("Edit Profil");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        editprofilhomedosen.setText("Edit Profil");
+        editprofilhomedosen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                editprofilhomedosenActionPerformed(evt);
             }
         });
 
@@ -85,7 +86,7 @@ public class homeDosen extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(114, 114, 114)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(editprofilhomedosen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(uploadmaterihomedosen, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -112,7 +113,7 @@ public class homeDosen extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(uploadmaterihomedosen)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(editprofilhomedosen)
                 .addGap(18, 18, 18)
                 .addComponent(inputsoalhomedosen)
                 .addGap(18, 18, 18)
@@ -154,7 +155,7 @@ public class homeDosen extends javax.swing.JFrame {
     }
 
     public JButton getjButton1() {
-        return jButton1;
+        return editprofilhomedosen;
     }
 
     private void signouthomedosenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signouthomedosenActionPerformed
@@ -166,14 +167,23 @@ public class homeDosen extends javax.swing.JFrame {
         
     }//GEN-LAST:event_uploadmaterihomedosenActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void editprofilhomedosenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editprofilhomedosenActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_editprofilhomedosenActionPerformed
 
     private void downloadjawabanhomedosenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_downloadjawabanhomedosenActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_downloadjawabanhomedosenActionPerformed
 
+    public void addListener (ActionListener e) {
+        uploadmaterihomedosen.addActionListener(e);
+        editprofilhomedosen.addActionListener(e);
+        inputsoalhomedosen.addActionListener(e);
+        downloadjawabanhomedosen.addActionListener(e);
+        pengolahannilaihomedosen.addActionListener(e);
+        pengolahankehadiranhomedosen.addActionListener(e);
+        signouthomedosen.addActionListener(e);
+    }
     /**
      * @param args the command line arguments
      */
@@ -211,8 +221,8 @@ public class homeDosen extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton downloadjawabanhomedosen;
+    private javax.swing.JButton editprofilhomedosen;
     private javax.swing.JButton inputsoalhomedosen;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JButton pengolahankehadiranhomedosen;
     private javax.swing.JButton pengolahannilaihomedosen;

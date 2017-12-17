@@ -5,6 +5,7 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 
@@ -145,6 +146,9 @@ public class pengolahanNilai extends javax.swing.JFrame {
         //new homeDosen().setVisible(true);
     }//GEN-LAST:event_inputnilaipengolahannilaiActionPerformed
 
+    public void addListener (ActionListener e) {
+        inputnilaipengolahannilai.addActionListener(e);
+    }
     /**
      * @param args the command line arguments
      */

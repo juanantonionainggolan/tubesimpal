@@ -5,6 +5,7 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JTable;
 import javax.swing.JTextField;
@@ -117,7 +118,10 @@ public class downloadJawaban extends javax.swing.JFrame {
     public void setDtxt(JTextField dtxt) {
         this.dtxt = dtxt;
     }
-
+    
+    public void addListener(ActionListener e) {
+        dbutton.addActionListener(e);
+    }
     /**
      * @param args the command line arguments
      */

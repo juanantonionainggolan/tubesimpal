@@ -5,6 +5,7 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JTable;
 
@@ -90,6 +91,10 @@ public class lihatKehadiran extends javax.swing.JFrame {
 
     public JButton getKembalib() {
         return kembalib;
+    }
+    
+    public void addListener (ActionListener e) {
+        kembalib.addActionListener(e);
     }
 
     /**

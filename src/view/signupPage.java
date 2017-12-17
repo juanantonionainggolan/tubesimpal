@@ -5,6 +5,7 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
@@ -280,6 +281,10 @@ public class signupPage extends javax.swing.JFrame {
 
     public JButton getDaftarsignup() {
         return daftarsignup;
+    }
+    
+    public void addListener (ActionListener e) {
+        daftarsignup.addActionListener(e);
     }
 
     private void daftarsignupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_daftarsignupActionPerformed

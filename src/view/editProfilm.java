@@ -5,6 +5,7 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 
@@ -152,6 +153,9 @@ public class editProfilm extends javax.swing.JFrame {
         //new homeDosen().setVisible(true);
     }//GEN-LAST:event_updateeditprofileActionPerformed
 
+    public void addListener (ActionListener e) {
+        updateeditprofile.addActionListener(e);
+    }
     /**
      * @param args the command line arguments
      */

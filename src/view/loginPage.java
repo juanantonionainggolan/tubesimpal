@@ -5,6 +5,7 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 
@@ -178,6 +179,11 @@ public class loginPage extends javax.swing.JFrame {
 
     public JButton getXlogin() {
         return xlogin;
+    }
+    
+    public void addListener (ActionListener e) {
+        lupapasswordsignin.addActionListener(e);
+        signupsignin.addActionListener(e);
     }
     
 
