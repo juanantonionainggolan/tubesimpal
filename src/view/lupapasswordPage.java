@@ -5,6 +5,9 @@
  */
 package view;
 
+import javax.swing.JButton;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Juan Antonio
@@ -83,13 +86,25 @@ public class lupapasswordPage extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public JTextField getEmaillupapassword() {
+        return emaillupapassword;
+    }
+
+    public void setEmaillupapassword(JTextField emaillupapassword) {
+        this.emaillupapassword = emaillupapassword;
+    }
+
+    public JButton getKirimpasswordlupapassword() {
+        return kirimpasswordlupapassword;
+    }
+
     private void emaillupapasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emaillupapasswordActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_emaillupapasswordActionPerformed
 
     private void kirimpasswordlupapasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kirimpasswordlupapasswordActionPerformed
-        dispose();
-        new popuplupapassword().setVisible(true);
+        //dispose();
+        //new popuplupapassword().setVisible(true);
     }//GEN-LAST:event_kirimpasswordlupapasswordActionPerformed
 
     /**

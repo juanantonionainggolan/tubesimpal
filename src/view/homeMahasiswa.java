@@ -5,6 +5,8 @@
  */
 package view;
 
+import javax.swing.JButton;
+
 /**
  *
  * @author Juan Antonio
@@ -66,26 +68,27 @@ public class homeMahasiswa extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(171, 171, 171)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(49, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(signouthomemahasiswa, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(editprofilehomemahasiswa, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lihatkehadiranhomemahasiswa, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lihatnilaihomemahasiswa, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(uploadjawabanhomemahasiswa, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(downloadmaterihomemahasiswa, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(signouthomemahasiswa, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(editprofilehomemahasiswa, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lihatkehadiranhomemahasiswa, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lihatnilaihomemahasiswa, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(uploadjawabanhomemahasiswa, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(downloadmaterihomemahasiswa, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(35, 35, 35))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(189, 189, 189))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
                 .addComponent(editprofilehomemahasiswa)
                 .addGap(36, 36, 36)
                 .addComponent(downloadmaterihomemahasiswa)
@@ -103,14 +106,38 @@ public class homeMahasiswa extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public JButton getDownloadmaterihomemahasiswa() {
+        return downloadmaterihomemahasiswa;
+    }
+
+    public JButton getEditprofilehomemahasiswa() {
+        return editprofilehomemahasiswa;
+    }
+
+    public JButton getLihatkehadiranhomemahasiswa() {
+        return lihatkehadiranhomemahasiswa;
+    }
+
+    public JButton getLihatnilaihomemahasiswa() {
+        return lihatnilaihomemahasiswa;
+    }
+
+    public JButton getSignouthomemahasiswa() {
+        return signouthomemahasiswa;
+    }
+
+    public JButton getUploadjawabanhomemahasiswa() {
+        return uploadjawabanhomemahasiswa;
+    }
+
     private void signouthomemahasiswaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signouthomemahasiswaActionPerformed
         dispose();
         new loginPage().setVisible(true);
     }//GEN-LAST:event_signouthomemahasiswaActionPerformed
 
     private void editprofilehomemahasiswaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editprofilehomemahasiswaActionPerformed
-        dispose();
-        new editProfilm().setVisible(true);
+        //dispose();
+        //new editProfilm().setVisible(true);
     }//GEN-LAST:event_editprofilehomemahasiswaActionPerformed
 
     /**

@@ -5,6 +5,9 @@
  */
 package view;
 
+import javax.swing.JButton;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Juan Antonio
@@ -144,6 +147,39 @@ public class loginPage extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    public JTextField getNimniplogin() {
+        return nimniplogin;
+    }
+
+    public void setNimniplogin(JTextField nimniplogin) {
+        this.nimniplogin = nimniplogin;
+    }
+
+    public JTextField getPasslogin() {
+        return passlogin;
+    }
+
+    public void setPasslogin(JTextField passlogin) {
+        this.passlogin = passlogin;
+    }
+
+    public JButton getLupapasswordsignin() {
+        return lupapasswordsignin;
+    }
+
+    public JButton getSigninsignin() {
+        return signinsignin;
+    }
+
+    public JButton getSignupsignin() {
+        return signupsignin;
+    }
+
+    public JButton getXlogin() {
+        return xlogin;
+    }
+    
 
     private void passloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passloginActionPerformed
         // TODO add your handling code here:

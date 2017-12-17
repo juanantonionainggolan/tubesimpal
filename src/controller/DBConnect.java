@@ -1,4 +1,4 @@
-package pembelajaranonline;
+package controller;
 import java.sql.*;
 public class DBConnect {
     private Connection con;

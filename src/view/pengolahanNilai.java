@@ -5,6 +5,9 @@
  */
 package view;
 
+import javax.swing.JButton;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Juan Antonio
@@ -30,7 +33,6 @@ public class pengolahanNilai extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
         matakuliahpengolahannilai = new javax.swing.JTextField();
         nilaipengolahannilai = new javax.swing.JTextField();
         nimpengolahannilai = new javax.swing.JTextField();
@@ -44,8 +46,6 @@ public class pengolahanNilai extends javax.swing.JFrame {
         jLabel2.setText("Nilai           :");
 
         jLabel3.setText("Mata Kuliah:");
-
-        jTextField3.setText("jTextField1");
 
         inputnilaipengolahannilai.setText("Input Nilai");
         inputnilaipengolahannilai.addActionListener(new java.awt.event.ActionListener() {
@@ -83,14 +83,9 @@ public class pengolahanNilai extends javax.swing.JFrame {
                         .addGap(7, 7, 7)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 115, Short.MAX_VALUE)
+                .addGap(0, 156, Short.MAX_VALUE)
                 .addComponent(jLabel4)
                 .addGap(93, 93, 93))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(196, Short.MAX_VALUE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(72, 72, 72)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -109,22 +104,45 @@ public class pengolahanNilai extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(nilaipengolahannilai, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 229, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 357, Short.MAX_VALUE)
                 .addComponent(inputnilaipengolahannilai)
                 .addGap(20, 20, 20))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(85, 85, 85)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(509, Short.MAX_VALUE)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public JButton getInputnilaipengolahannilai() {
+        return inputnilaipengolahannilai;
+    }
+
+    public JTextField getMatakuliahpengolahannilai() {
+        return matakuliahpengolahannilai;
+    }
+
+    public void setMatakuliahpengolahannilai(JTextField matakuliahpengolahannilai) {
+        this.matakuliahpengolahannilai = matakuliahpengolahannilai;
+    }
+
+    public JTextField getNilaipengolahannilai() {
+        return nilaipengolahannilai;
+    }
+
+    public void setNilaipengolahannilai(JTextField nilaipengolahannilai) {
+        this.nilaipengolahannilai = nilaipengolahannilai;
+    }
+
+    public JTextField getNimpengolahannilai() {
+        return nimpengolahannilai;
+    }
+
+    public void setNimpengolahannilai(JTextField nimpengolahannilai) {
+        this.nimpengolahannilai = nimpengolahannilai;
+    }
+
     private void inputnilaipengolahannilaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputnilaipengolahannilaiActionPerformed
-        dispose();
-        new homeDosen().setVisible(true);
+        //dispose();
+        //new homeDosen().setVisible(true);
     }//GEN-LAST:event_inputnilaipengolahannilaiActionPerformed
 
     /**
@@ -168,7 +186,6 @@ public class pengolahanNilai extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField matakuliahpengolahannilai;
     private javax.swing.JTextField nilaipengolahannilai;
     private javax.swing.JTextField nimpengolahannilai;

@@ -5,6 +5,10 @@
  */
 package view;
 
+import javax.swing.JButton;
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Juan Antonio
@@ -210,9 +214,77 @@ public class signupPage extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public JTextField getAlamatsignup() {
+        return alamatsignup;
+    }
+
+    public void setAlamatsignup(JTextField alamatsignup) {
+        this.alamatsignup = alamatsignup;
+    }
+
+    public JRadioButton getDosensignup() {
+        return dosensignup;
+    }
+
+    public void setDosensignup(JRadioButton dosensignup) {
+        this.dosensignup = dosensignup;
+    }
+
+    public JTextField getEmailsignup() {
+        return emailsignup;
+    }
+
+    public void setEmailsignup(JTextField emailsignup) {
+        this.emailsignup = emailsignup;
+    }
+
+    public JRadioButton getMahasiswasignip() {
+        return mahasiswasignip;
+    }
+
+    public void setMahasiswasignip(JRadioButton mahasiswasignip) {
+        this.mahasiswasignip = mahasiswasignip;
+    }
+
+    public JTextField getNamasignup() {
+        return namasignup;
+    }
+
+    public void setNamasignup(JTextField namasignup) {
+        this.namasignup = namasignup;
+    }
+
+    public JTextField getNimnipsignup() {
+        return nimnipsignup;
+    }
+
+    public void setNimnipsignup(JTextField nimnipsignup) {
+        this.nimnipsignup = nimnipsignup;
+    }
+
+    public JTextField getPasssignup() {
+        return passsignup;
+    }
+
+    public void setPasssignup(JTextField passsignup) {
+        this.passsignup = passsignup;
+    }
+
+    public JTextField getTgllahirsignup() {
+        return tgllahirsignup;
+    }
+
+    public void setTgllahirsignup(JTextField tgllahirsignup) {
+        this.tgllahirsignup = tgllahirsignup;
+    }
+
+    public JButton getDaftarsignup() {
+        return daftarsignup;
+    }
+
     private void daftarsignupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_daftarsignupActionPerformed
-        dispose();
-        new loginPage().setVisible(true);
+        //dispose();
+        //new loginPage().setVisible(true);
     }//GEN-LAST:event_daftarsignupActionPerformed
 
     private void mahasiswasignipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mahasiswasignipActionPerformed

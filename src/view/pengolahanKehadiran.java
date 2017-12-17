@@ -5,6 +5,9 @@
  */
 package view;
 
+import javax.swing.JButton;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Juan Antonio
@@ -117,6 +120,34 @@ public class pengolahanKehadiran extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    public JButton getInputkehadiranpengolahankehadiran() {
+        return inputkehadiranpengolahankehadiran;
+    }
+
+    public JTextField getKehadiranpengolahankehadiran() {
+        return kehadiranpengolahankehadiran;
+    }
+
+    public void setKehadiranpengolahankehadiran(JTextField kehadiranpengolahankehadiran) {
+        this.kehadiranpengolahankehadiran = kehadiranpengolahankehadiran;
+    }
+
+    public JTextField getMatakuiahpengolahankehadiran() {
+        return matakuiahpengolahankehadiran;
+    }
+
+    public void setMatakuiahpengolahankehadiran(JTextField matakuiahpengolahankehadiran) {
+        this.matakuiahpengolahankehadiran = matakuiahpengolahankehadiran;
+    }
+
+    public JTextField getNimpengolahankehadiran() {
+        return nimpengolahankehadiran;
+    }
+
+    public void setNimpengolahankehadiran(JTextField nimpengolahankehadiran) {
+        this.nimpengolahankehadiran = nimpengolahankehadiran;
+    }
 
     private void matakuiahpengolahankehadiranActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matakuiahpengolahankehadiranActionPerformed
         // TODO add your handling code here:
