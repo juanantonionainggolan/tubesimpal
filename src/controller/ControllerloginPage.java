@@ -27,14 +27,14 @@ public class ControllerloginPage implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         Object a = e.getSource();
         DBConnect d = new DBConnect();
-//        if (a==loginpage.getLupapasswordsignin()){
-//            loginpage.dispose();
-//            new ControllerlupapasswordPage();
-//        }
-//        else if (a==loginpage.getSignupsignin()){
-//            loginpage.dispose();
-//            new ControllerSignUp();
-//        }
+        if (a==loginpage.getLupapasswordsignin()){
+            loginpage.dispose();
+            new ControllerlupapasswordPage();
+        }
+        else if (a==loginpage.getSignupsignin()){
+            loginpage.dispose();
+            new ControllerSignUp();
+        }
 //        else if (a.equals(loginpage.getSigninsignin())){
 //            try {
 //                String nimnimp = loginpage.getNimniplogin();

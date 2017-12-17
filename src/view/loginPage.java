@@ -201,13 +201,11 @@ public class loginPage extends javax.swing.JFrame {
     }//GEN-LAST:event_signinsigninActionPerformed
 
     private void signupsigninActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupsigninActionPerformed
-        dispose();
-        new signupPage().setVisible(true);
+
     }//GEN-LAST:event_signupsigninActionPerformed
 
     private void lupapasswordsigninActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lupapasswordsigninActionPerformed
-        dispose();
-        new lupapasswordPage().setVisible(true);
+
     }//GEN-LAST:event_lupapasswordsigninActionPerformed
 
     private void xloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xloginActionPerformed
