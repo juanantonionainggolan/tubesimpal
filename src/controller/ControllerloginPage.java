@@ -17,7 +17,7 @@ import view.loginPage;
  * @author Dunia Imajinasiku
  */
 public class ControllerloginPage implements ActionListener {
-    loginPage loginpage;
+    private loginPage loginpage;
     public ControllerloginPage(){
         loginpage = new loginPage();
         loginpage.setVisible(true);
@@ -27,28 +27,37 @@ public class ControllerloginPage implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         Object a = e.getSource();
         DBConnect d = new DBConnect();
-        if (a==loginpage.getLupapasswordsignin()){
-            loginpage.dispose();
-            new ControllerlupapasswordPage();
-        }
-        else if (a==loginpage.getSignupsignin()){
-            loginpage.dispose();
-            new ControllerSignUp();
-        }
-        else if (a.equals(loginpage.getSigninsignin())){
-            try {
-                String nimnimp = loginpage.getNimniplogin();
-                String password = loginpage.getPasslogin();
-                if (d.cekuser(nimnimp, password) == true ){
-                    new ControllerSignUp();
-                    System.out.println("Login Sukses");
-                }
-                else {
-                    new ControllerloginPage();
-                }
-            } catch (SQLException ex) {
-                Logger.getLogger(ControllerloginPage.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
+//        if (a==loginpage.getLupapasswordsignin()){
+//            loginpage.dispose();
+//            new ControllerlupapasswordPage();
+//        }
+//        else if (a==loginpage.getSignupsignin()){
+//            loginpage.dispose();
+//            new ControllerSignUp();
+//        }
+//        else if (a.equals(loginpage.getSigninsignin())){
+//            try {
+//                String nimnimp = loginpage.getNimniplogin();
+//                String password = loginpage.getPasslogin();
+//                if ((d.cekuserm(nimnimp, password) == null ) && (d.cekuserd(nimnimp, password) == null )) {
+//                    loginpage.dispose();
+//                    new ControllerloginPage();
+//                    System.out.println("Login Sukses");
+//                }
+//                else if (d.cekuserm(nimnimp, password)!= null) {
+//                    loginpage.dispose();
+//                    new ControllerSignUp();
+//                    System.out.println("abc");
+//                }
+//                else if (d.cekuserd(nimnimp, password)!= null) {
+//                    loginpage.dispose();
+//                    new ControllerlupapasswordPage();
+//                    System.out.println("cba");
+//                }
+//            } catch (SQLException ex) {
+//                Logger.getLogger(ControllerloginPage.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//        }
     }
+
 }

@@ -56,6 +56,7 @@ public class ControllerSignUp implements ActionListener {
                 } catch (SQLException ex) {
                     Logger.getLogger(ControllerSignUp.class.getName()).log(Level.SEVERE, null, ex);
                 }
+                signup.dispose();
                 new ControllerloginPage();
             }
       
