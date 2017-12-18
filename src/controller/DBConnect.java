@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import model.dosen;
 import model.jawaban;
 import model.mahasiswa;
+import model.materi;
 import model.nilai;
 public class DBConnect {
     private Connection con;
@@ -178,5 +179,54 @@ public class DBConnect {
             throw new IllegalArgumentException("terjadi kesalahan saat load jawaban");
             }
             
+    }
+    
+    public ArrayList<materi> loadmateri() throws SQLException {
+            Statement statement;
+            Connection connection;
+            connection = DriverManager.getConnection("jdbc:mysql://localhost/impal", "root", "");
+            statement = connection.createStatement();
+            try{
+                ArrayList<materi> daftarmateri =new ArrayList<>();
+                String query = "select *from materi";
+                ResultSet rs = statement.executeQuery(query);
+                while (rs.next()) {
+                    materi m= new materi(rs.getString("kode_materi"), rs.getString("nama_materi"));
+                    daftarmateri.add(m);
+                }
+                return daftarmateri;
+            }catch (Exception e) {
+            throw new IllegalArgumentException("terjadi kesalahan saat load");
+            }
+            
+    }
+        
+    public void updateDatabaseDosen(String password, String email, String alamat,String nip)throws SQLException {
+            Statement statement;
+            Connection connection;
+            connection = DriverManager.getConnection("jdbc:mysql://localhost/impal", "root", "");
+            statement = connection.createStatement();
+            String query1="select*from dosen where nip="
+                + "'" + nip + "';";
+            ResultSet ds=statement.executeQuery(query1);
+            String nama=ds.getString("nama");
+            String tgl_lahir=ds.getString("tgl_lahir");
+            String query = "update dosen "
+                + "set nip="
+                + "'" + nip + "',"
+                + "nama="
+                + "'" + nama + "'"
+                + "email="
+                + "'" + email + "'"
+                + "alamat="
+                + "'" + alamat + "'"
+                + "tgl_lahir="
+                + "'" + tgl_lahir + "'"
+                + "password="
+                + "'" + password + "'"
+                + "where nip="
+                + "'" + nip + "';";
+            statement.execute(query);
+
     }
 }
