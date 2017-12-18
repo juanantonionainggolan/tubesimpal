@@ -5,22 +5,35 @@
  */
 package view;
 
+import controller.DBConnect;
 import java.awt.event.ActionListener;
+import java.sql.*;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author Juan Antonio
  */
 public class lihatNilai extends javax.swing.JFrame {
+    private DBConnect a;
+    private DefaultTableModel model;
+    private Connection con;
+    private Statement st;
+    private ResultSet rs;
 
-    /**
-     * Creates new form lihatNilai
-     */
     public lihatNilai() {
         initComponents();
+        model = new DefaultTableModel ( );
+        tabelnilai.setModel(model);
+        model.addColumn("NIM");
+        model.addColumn("Mata Kuliah");
+        model.addColumn("Nilai");
     }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -32,13 +45,14 @@ public class lihatNilai extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tabelnilai = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
+        lihatnilai = new javax.swing.JButton();
         kembalib = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tabelnilai.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
                 {null, null},
@@ -49,9 +63,16 @@ public class lihatNilai extends javax.swing.JFrame {
                 "Mata Kuliah", "Nilai"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tabelnilai);
 
         jLabel1.setText("Nilai Mahasiswa");
+
+        lihatnilai.setText("Lihat");
+        lihatnilai.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lihatnilaiActionPerformed(evt);
+            }
+        });
 
         kembalib.setText("Kembali");
 
@@ -60,17 +81,20 @@ public class lihatNilai extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(142, 142, 142))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addContainerGap())
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addComponent(jLabel1)
+                            .addGap(142, 142, 142)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lihatnilai, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(kembalib)
-                        .addContainerGap())))
+                        .addGap(30, 30, 30))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -80,21 +104,45 @@ public class lihatNilai extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(42, 42, 42)
-                .addComponent(kembalib)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lihatnilai)
+                    .addComponent(kembalib))
                 .addContainerGap(69, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    public JTable getjTable1() {
-        return jTable1;
+    private void lihatnilaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lihatnilaiActionPerformed
+        model.getDataVector().removeAllElements();
+        model.fireTableDataChanged();
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://localhost/impal","root","");
+            st = con.createStatement();
+            String query = "select *from nilai";
+            ResultSet rs = st.executeQuery(query);
+            while(rs.next()){
+                Object [] o = new Object[3];
+                o[0] = rs.getString("nim");
+                o[1] = rs.getString("mata_kuliah");
+                o[2] = rs.getInt("nilai");
+                model.addRow(o);
+            }
+            rs.close();
+            st.close();
+        }catch(Exception ex){
+            JOptionPane.showMessageDialog(null, "Gagal koneksi "+ex);
+        }
+    }//GEN-LAST:event_lihatnilaiActionPerformed
+
+    public JTable gettabelNilai() {
+        return tabelnilai;
     }
 
     public JButton getKembalib() {
         return kembalib;
     }
-    
     public void addListener (ActionListener e) {
         kembalib.addActionListener(e);
     }
@@ -137,7 +185,8 @@ public class lihatNilai extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JButton kembalib;
+    private javax.swing.JButton lihatnilai;
+    private javax.swing.JTable tabelnilai;
     // End of variables declaration//GEN-END:variables
 }

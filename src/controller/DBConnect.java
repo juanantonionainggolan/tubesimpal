@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import model.dosen;
 import model.jawaban;
 import model.mahasiswa;
+import model.nilai;
 public class DBConnect {
     private Connection con;
     private Statement st;
@@ -174,7 +175,7 @@ public class DBConnect {
                 }
                 return daftarjawaban;
             }catch (Exception e) {
-            throw new IllegalArgumentException("terjadi kesalahan saat load penyewa");
+            throw new IllegalArgumentException("terjadi kesalahan saat load jawaban");
             }
             
     }

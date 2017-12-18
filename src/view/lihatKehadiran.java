@@ -5,9 +5,16 @@
  */
 package view;
 
+import controller.DBConnect;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -15,11 +22,20 @@ import javax.swing.JTable;
  */
 public class lihatKehadiran extends javax.swing.JFrame {
 
-    /**
-     * Creates new form lihatKehadiran
-     */
+    private DBConnect a;
+    private DefaultTableModel model;
+    private Connection con;
+    private Statement st;
+    private ResultSet rs;
+    
     public lihatKehadiran() {
         initComponents();
+        
+        model = new DefaultTableModel ( );
+        tabelkehadiran.setModel(model);
+        model.addColumn("NIM");
+        model.addColumn("Mata Kuliah");
+        model.addColumn("Kehadiran");
     }
 
     /**
@@ -32,13 +48,14 @@ public class lihatKehadiran extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tabelkehadiran = new javax.swing.JTable();
         kembalib = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        lihatkehadiran = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tabelkehadiran.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
                 {null, null},
@@ -49,21 +66,33 @@ public class lihatKehadiran extends javax.swing.JFrame {
                 "Mata Kuliah", "Kehadiran"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tabelkehadiran);
 
         kembalib.setText("Kembali");
 
         jLabel1.setText("Kehadiran Mahasiswa");
+
+        lihatkehadiran.setText("Lihat");
+        lihatkehadiran.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lihatkehadiranActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(kembalib, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(lihatkehadiran)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(kembalib))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGap(149, 149, 149)
@@ -78,15 +107,40 @@ public class lihatKehadiran extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(kembalib)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(kembalib)
+                    .addComponent(lihatkehadiran))
                 .addGap(56, 56, 56))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void lihatkehadiranActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lihatkehadiranActionPerformed
+        model.getDataVector().removeAllElements();
+        model.fireTableDataChanged();
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://localhost/impal","root","");
+            st = con.createStatement();
+            String query = "select *from kehadiran";
+            ResultSet rs = st.executeQuery(query);
+            while(rs.next()){
+                Object [] o = new Object[3];
+                o[0] = rs.getString("nim");
+                o[1] = rs.getString("mata_kuliah");
+                o[2] = rs.getInt("kehadiran");
+                model.addRow(o);
+            }
+            rs.close();
+            st.close();
+        }catch(Exception ex){
+            JOptionPane.showMessageDialog(null, "Gagal koneksi "+ex);
+        }
+    }//GEN-LAST:event_lihatkehadiranActionPerformed
+
     public JTable getjTable1() {
-        return jTable1;
+        return tabelkehadiran;
     }
 
     public JButton getKembalib() {
@@ -135,7 +189,8 @@ public class lihatKehadiran extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JButton kembalib;
+    private javax.swing.JButton lihatkehadiran;
+    private javax.swing.JTable tabelkehadiran;
     // End of variables declaration//GEN-END:variables
 }
