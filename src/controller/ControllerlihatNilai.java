@@ -21,7 +21,7 @@ public class ControllerlihatNilai implements ActionListener{
         DBConnect d = new DBConnect();
         if (a== lihatnilai.getKembalib()){
             lihatnilai.dispose();
-            new ControllerSignUp();
+            new ControllerhomeMahasiswa();
         }
     }
 }
