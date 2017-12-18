@@ -24,7 +24,7 @@ public class ControllerlihatKehadiran implements ActionListener{
         DBConnect d = new DBConnect();
         if (a== lihatkehadiran.getKembalib()){
             lihatkehadiran.dispose();
-            new ControllerhomeMahasiswa();
+            new ControllerHomeMahasiswa();
         }
     }
 }

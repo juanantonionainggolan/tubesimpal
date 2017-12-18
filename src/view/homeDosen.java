@@ -130,6 +130,10 @@ public class homeDosen extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public JButton getEditprofilhomedosen() {
+        return editprofilhomedosen;
+    }
+   
     public JButton getDownloadjawabanhomedosen() {
         return downloadjawabanhomedosen;
     }

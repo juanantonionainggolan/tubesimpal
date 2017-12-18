@@ -38,7 +38,7 @@ public class ControllerdownloadMateri implements ActionListener {
         Object a = e.getSource();
         if (a == downloadmateri.getDownload()){
             downloadmateri.dispose();
-            new ControllerhomeMahasiswa();
+            new ControllerHomeMahasiswa();
         }
     }
 }

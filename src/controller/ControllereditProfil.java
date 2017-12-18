@@ -41,7 +41,7 @@ public class ControllereditProfil implements ActionListener {
                 Logger.getLogger(ControllereditProfil.class.getName()).log(Level.SEVERE, null, ex);
             }
             editprofil.dispose();
-            new ControllerhomeDosen();
+            new ControllerHomeDosen();
         }
     }
 }
